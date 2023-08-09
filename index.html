@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="flex w-screen h-screen justify-center items-center bg-gradient-to-br from-[#234e70] from-40% to-[#fbf8be] to-100%">
+        <div class="w-auto h-auto py-3 px-4 space-y-2 ">
+            <h1 class="flex justify-center font-semibold text-2xl text-white">PASSWORD GENERATOR</h1>
+
+            <!--output password-->
+            <div class=" flex border-2 border-y-teal-500 rounded-lg p-6 bg-blue-950">
+                <input output class="rounded-l-lg p-2" readonly placeholder="Password">
+
+                <!--copy button-->
+                <button copy-btn>
+                    <span copy-output></span>
+                    <img class="h-[40px] bg-white rounded-e-lg p-2" src="/images/copy-regular.svg" alt="">
+                </button>
+            </div>
+
+            <!--main container-->
+            <div class="main-container px-3 flex flex-col bg-blue-950 text-green-400 py-2 border-2 border-y-teal-500 rounded-lg space-y-3">
+                <div class="flex flex-row justify-between">
+                    <h3>Password Length</h3>
+                    <p password-lenght class="bg-cyan-500 text-blue-950 font-bold rounded-md px-1">7</p>
+                </div>
+
+                <!--slider-->
+                <div>
+                    <input type="range" min="4" max="10" step="" list="markers" scroller class="w-full accent-cyan-500">
+                    <datalist id="markers">
+                        <option value="5"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="6"></option>
+                    </datalist>
+                </div>
+
+                <!--ckeckboxes-->
+                <div allChecks> 
+                    <div>
+                        <input type="checkbox" check1>  
+                        <label for="uppercase">Includes Uppercase Letters</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" check2>
+                        <label for="lowercase">Includes Lowercase Letters</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" check3>
+                        <label for="number">Includes Number</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" check4>
+                        <label for="symbols">Includes Symbols</label>
+                    </div>
+                </div>
+
+
+                <!--strenght-->
+                <div class="flex flex-row items-center justify-between">
+                    <h3>Strength</h3>
+                    <div password-strength class="rounded-ful w-4 h-4"></div>
+                </div>
+
+                <!--button-->
+                <button class="generate-password border-4 rounded-md mx-auto drop-shadow-md w-11/12 py-2 text-xl bg-green-400 text-sky-950 font-semibold border-cyan-500">Generate Password</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!--js-->
+    <script src="index.js"></script>
+</body>
+</html>
